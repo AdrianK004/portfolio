@@ -1,147 +1,15 @@
-html {
-  scroll-behavior: smooth;
+@import "tailwindcss";
+
+@theme {
+  --color-blue-600: #2563eb;
+  --color-purple-600: #9333ea;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: white;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 50px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 1000;
-}
-
-ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-section {
-  min-height: 100vh;
-  padding: 50px;
-}
-
-#projects div {
-  display: flex;
-  gap: 20px;
-}
-
-#projects div div {
-  border: 1px solid #ccc;
-  padding: 20px;
-  width: 200px;
-}
-
-.backToTop {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  padding: 10px 15px;
-  font-size: 20px;
-  background: black;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
-
-.backToTop.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.backToTop:hover {
-  transform: scale(1.1);
-}
-
-.card {
-  border: none;
-  padding: 20px;
-  width: 250px;
-  border-radius: 15px;
-  background: #f9f9f9;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-.buttons {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.buttons a {
-  text-decoration: none;
-  background: black;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 50px;
-}
-
-.hero h1 {
-  font-size: 48px;
-}
-
-.hero p {
-  font-size: 20px;
-  margin: 10px 0;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: black;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.contact-form button {
-  padding: 10px;
-  background: black;
-  color: white;
-  border: none;
-  cursor: pointer;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: transparent;
+  }
 }

@@ -1,18 +1,17 @@
-import Navbar from "./components/Navbar";
-import Home from "./sections/Home";
-import About from "./sections/About";
-import Projects from "./sections/Projects";
-import BackToTop from "./components/BackToTop";
-import Contact from "./sections/Contact";
+import Header from './components/Header';
+import Home from './sections/Home';
+import About from './sections/About';
+import Projects from './sections/Projects';
+import Contact from './sections/Contact';
 
 function App() {
   return (
     <div>
-      <Navbar />
+      <Header />
+      <div className="h-40"></div>
       <Home />
       <About />
       <Projects />
-      <BackToTop />
       <Contact />
     </div>
   );

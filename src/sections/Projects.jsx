@@ -12,7 +12,7 @@ function Projects() {
             key={index}
             className="card"
             initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 10 }}
             transition={{ delay: index * 0.2 }}
           >
             <h3>{project.title}</h3>
