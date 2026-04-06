@@ -15,12 +15,10 @@ function Header() {
       <header className="fixed top-0 left-0 w-full z-50 bg-transparent">
         <div className="w-full px-6 md:px-12 lg:px-20">
           <div className="flex justify-between items-center py-4">
-            {/* Logo - majtas */}
             <a href="#home" className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent">
               AK
             </a>
 
-            {/* Navbar - djathtas */}
             <div className="hidden md:flex gap-8 lg:gap-12">
               {navLinks.map((link) => (
                 <a
