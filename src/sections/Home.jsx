@@ -6,6 +6,7 @@ function Home() {
     <section 
       id="home" 
       className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden"
+      style={{ backgroundColor: 'transparent' }}
     >
       {/* Background Image me hijezim */}
       <div 
@@ -33,7 +34,7 @@ function Home() {
           className="inline-block mb-6"
         >
           <span className="bg-blue-600/20 backdrop-blur-sm text-blue-200 px-4 py-2 rounded-full text-sm font-semibold border border-blue-400/30">
-            ✨ Open for opportunities in Germany
+            ✨ Comming soon
           </span>
         </motion.div>
 
@@ -62,7 +63,6 @@ function Home() {
           className="text-lg text-gray-200 max-w-2xl mx-auto mb-8"
         >
           Passionate about building modern web applications with React, Tailwind CSS, and clean code.
-          Based in Kosovo, targeting the German tech market.
         </motion.p>
 
         <motion.div

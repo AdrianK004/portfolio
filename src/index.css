@@ -1,15 +1,12 @@
-@import "tailwindcss";
-
-@theme {
-  --color-blue-600: #2563eb;
-  --color-purple-600: #9333ea;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   html {
     scroll-behavior: smooth;
   }
   body {
-    background: transparent;
+    background-color: white;
   }
 }

@@ -1,3 +1,4 @@
+// src/components/Header.jsx
 import { useState, useEffect } from 'react';
 
 function Header() {
@@ -12,19 +13,15 @@ function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-50" style={{ backgroundColor: 'transparent' }}
-      >
+      <header className="fixed top-0 left-0 w-full z-50 bg-transparent">
         <div className="w-full px-6 md:px-12 lg:px-20">
           <div className="flex justify-between items-center py-4">
-            {/* Logo */}
-            <a
-              href="#home"
-              className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
-            >
+            {/* Logo - majtas */}
+            <a href="#home" className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               AK
             </a>
 
-            {/* Desktop Menu - Qendër */}
+            {/* Navbar - djathtas */}
             <div className="hidden md:flex gap-8 lg:gap-12">
               {navLinks.map((link) => (
                 <a
@@ -86,9 +83,6 @@ function Header() {
           </div>
         )}
       </header>
-
-      {/* Spacer */}
-      <div className="h-20"></div>
     </>
   );
 }
