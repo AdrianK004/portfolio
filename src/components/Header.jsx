@@ -1,4 +1,3 @@
-// src/components/Header.jsx
 import { useState, useEffect } from 'react';
 
 function Header() {
@@ -17,7 +16,7 @@ function Header() {
         <div className="w-full px-6 md:px-12 lg:px-20">
           <div className="flex justify-between items-center py-4">
             {/* Logo - majtas */}
-            <a href="#home" className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <a href="#home" className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent">
               AK
             </a>
 
@@ -27,7 +26,7 @@ function Header() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium text-lg"
+                  className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-105 transition-all duration-200 font-medium text-lg"
                 >
                   {link.name}
                 </a>
@@ -65,23 +64,31 @@ function Header() {
           </div>
         </div>
 
+        <>
         {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden bg-white dark:bg-gray-900 shadow-xl border-t dark:border-gray-800">
-            <div className="flex flex-col items-center gap-5 py-8">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium text-lg"
-                >
-                  {link.name}
-                </a>
-              ))}
-            </div>
+        <div className={`md:hidden fixed top-20 left-4 right-4 rounded-2xl z-[999] 
+                        bg-blue-500/20 dark:bg-black/30 
+                        backdrop-blur-md 
+                        border border-white/25 dark:border-white/5
+                        shadow-xl
+                        transition-all duration-300 ease-out
+                        ${isMobileMenuOpen 
+                          ? 'opacity-100 translate-y-0 pointer-events-auto' 
+                          : 'opacity-0 -translate-y-8 pointer-events-none'}`}>
+          <div className="flex flex-col items-center gap-5 py-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-white/80 hover:text-blue-400 hover:scale-105 transition-all duration-200 font-medium text-lg"
+              >
+                {link.name}
+              </a>
+            ))}
           </div>
-        )}
+        </div>
+      </>
       </header>
     </>
   );
