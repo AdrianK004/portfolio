@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import backgroundImage from '../assets/background-image.jpg';
+import profilePhoto from '../assets/AdrianKrasniqi.png';
 
 function Home() {
   return (
@@ -34,8 +35,23 @@ function Home() {
           className="inline-block mb-6"
         >
           <span className="bg-blue-600/20 backdrop-blur-sm text-blue-200 px-4 py-2 rounded-full text-sm font-semibold border border-blue-400/30">
-            ✨ Comming soon
+            ✨ I'm working on it ...
           </span>
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="flex justify-center mb-8"
+        >
+          <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white/15 shadow-xl">
+            <img 
+              src={profilePhoto} 
+              alt="Adrian Krasniqi" 
+              className="w-full h-full object-cover"
+            />
+          </div>
         </motion.div>
 
         <motion.h1
