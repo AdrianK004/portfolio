@@ -7,6 +7,6 @@ export default {
     extend: {},
   },
   plugins: [
-    require('tailwindcss-animate'), // Shto këtë
+    require('tailwindcss-animate'),
   ],
 }

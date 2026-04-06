@@ -67,9 +67,9 @@ function Header() {
         <>
         {/* Mobile Menu */}
         <div className={`md:hidden fixed top-20 left-4 right-4 rounded-2xl z-[999] 
-                        bg-blue-500/20 dark:bg-black/30 
+                        bg-black/30 
                         backdrop-blur-md 
-                        border border-white/25 dark:border-white/5
+                        border border-white/5
                         shadow-xl
                         transition-all duration-300 ease-out
                         ${isMobileMenuOpen 
