@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import Home from './sections/Home';
+import About from './sections/about';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <main>
         <Home />
         <div className="bg-white">
+        <About />
         </div>
       </main>
     </>
