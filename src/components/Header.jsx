@@ -2,6 +2,20 @@ import { useState, useEffect } from 'react';
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
     { name: 'Home', href: '#home' },
@@ -16,7 +30,11 @@ function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-50 bg-transparent">
+      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        scrolled 
+          ? 'bg-black/30 backdrop-blur-md rounded-b-3xl' 
+          : 'bg-transparent'
+      }`}>
         <div className="w-full px-6 md:px-12 lg:px-20">
           <div className="flex justify-between items-center py-4">
             <a href="#home" className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent">
