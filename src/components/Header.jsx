@@ -46,7 +46,7 @@ function Header() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-105 transition-all duration-200 font-medium text-lg"
+                  className="text-gray-200 hover:text-blue-400 hover:scale-105 transition-all duration-200 font-medium text-lg"
                 >
                   {link.name}
                 </a>
@@ -56,7 +56,7 @@ function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden text-gray-700 dark:text-gray-200 focus:outline-none"
+              className="md:hidden text-gray-200 focus:outline-none"
             >
               <svg
                 className="w-7 h-7"
