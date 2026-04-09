@@ -32,7 +32,7 @@ function Header() {
     <>
       <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-black/30 backdrop-blur-md rounded-b-3xl' 
+          ? 'bg-gray-900 rounded-b-3xl' 
           : 'bg-transparent'
       }`}>
         <div className="w-full px-6 md:px-12 lg:px-20">
@@ -85,16 +85,17 @@ function Header() {
         </div>
 
         <>
+        
         {/* Mobile Menu */}
         <div className={`md:hidden fixed top-20 left-4 right-4 rounded-2xl z-[999] 
-                        bg-black/30 
+                        bg-black/60 
                         backdrop-blur-md 
                         border border-white/5
                         shadow-xl
                         transition-all duration-300 ease-out
                         ${isMobileMenuOpen 
                           ? 'opacity-100 translate-y-0 pointer-events-auto' 
-                          : 'opacity-0 -translate-y-8 pointer-events-none'}`}>
+                          : 'opacity-0 -translate-y-8 pointer-events-none '}`}$>
           <div className="flex flex-col items-center gap-5 py-8">
             {navLinks.map((link) => (
               <a

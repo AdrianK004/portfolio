@@ -49,7 +49,7 @@ const About = () => {
   }, [hasAnimated]);
 
   return (
-    <section id="about" ref={sectionRef} className="py-8 px-6 md:px-12 bg-white dark:bg-gray-900">
+    <section id="about" ref={sectionRef} className="py-20 px-6 md:px-12 bg-gray-900">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
