@@ -36,7 +36,7 @@ function Skills() {
             </div>
             <h3 className="text-lg sm:text-xl font-bold text-white mb-3">FULL-STACK</h3>
             <p className="text-gray-200 text-xs sm:text-sm leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Full-stack developer with 4+ years of hands-on experience building modern, scalable web applications. Skilled in React, Tailwind, and Vite for frontend, and Node.js, Express, MySQL, and Laravel for backend, with strong knowledge of Git-based workflows.
             </p>
           </motion.div>
 
@@ -56,7 +56,7 @@ function Skills() {
             </div>
             <h3 className="text-lg sm:text-xl font-bold text-white mb-3">JAVA</h3>
             <p className="text-gray-200 text-xs sm:text-sm leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Java developer with a solid foundation built from high school through university, focused on object-oriented programming and application development. Developed multiple projects, including a POS system for retail businesses.
             </p>
           </motion.div>
 
@@ -78,7 +78,7 @@ function Skills() {
             </div>
             <h3 className="text-lg sm:text-xl font-bold text-white mb-3">PYTHON</h3>
             <p className="text-gray-200 text-xs sm:text-sm leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Experienced with Python through academic and personal projects, including building small applications and working with image processing and data manipulation.
             </p>
           </motion.div>
 
@@ -100,7 +100,7 @@ function Skills() {
             </div>
             <h3 className="text-lg sm:text-xl font-bold text-white mb-3">C++</h3>
             <p className="text-gray-200 text-xs sm:text-sm leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Motivated to master C and C++, with a strong belief that a solid programming foundation enables rapid learning of new technologies. Currently developing my skills with a focus on performance and system-level programming.
             </p>
           </motion.div>
 
@@ -120,7 +120,7 @@ function Skills() {
             </div>
             <h3 className="text-lg sm:text-xl font-bold text-white mb-3">C#</h3>
             <p className="text-gray-200 text-xs sm:text-sm leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Expanding my skills in C# with a focus on game development and interactive systems. Leveraging a strong programming background to quickly adapt and build creative, real-world projects.
             </p>
           </motion.div>
 
@@ -140,7 +140,7 @@ function Skills() {
             </div>
             <h3 className="text-lg sm:text-xl font-bold text-white mb-3">OOP</h3>
             <p className="text-gray-200 text-xs sm:text-sm leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Solid understanding of Object-Oriented Programming principles, enabling the development of scalable, modular, and maintainable software solutions across different technologies.
             </p>
           </motion.div>
         </div>
