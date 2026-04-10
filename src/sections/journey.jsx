@@ -45,14 +45,14 @@ const Journey = () => {
     {
       period: "2021 - 2025",
       title: "Studies",
-      school: "University of Prizren",
+      school: "University of Prizren 'Ukshin Hoti'",
       description: "I continued my studies in Computer Science, a period where I made the key decision to pursue my professional career in technology. Throughout this journey, I experienced both rewarding and challenging moments, all approached with strong focus and dedication. I achieved a GPA of 9.0 and was awarded four scholarships from both the state and the faculty. During this time, I developed various projects and continue to build on this path in a professional capacity.",
       location: "Prizren, Kosovo"
     }
   ];
 
   return (
-    <section id="journey" ref={sectionRef} className="py-20 px-6 md:px-12 bg-gray-900">
+    <section id="journey" ref={sectionRef} className="px-6 md:px-12 bg-gray-900">
       <div className="max-w-7xl mx-auto">
         <div className='border-t-4 mx-0 sm:mx-4 md:mx-20 rounded-full border-blue-800'></div>
         
