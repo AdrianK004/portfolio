@@ -24,7 +24,7 @@ function Work() {
 
   return (
     <section id="work" className="bg-gray-900">
-      <div className="container max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6">
         <div className='border-t-4 mx-0 sm:mx-4 md:mx-20 rounded-full border-blue-800'></div>
         {/* Titulli */}
         <motion.div
