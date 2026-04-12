@@ -23,18 +23,6 @@ function Home() {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
-        
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="flex justify-center mb-8"
-        >
-          <span className="bg-blue-600/20 backdrop-blur-sm text-blue-200 px-4 py-2 rounded-full text-sm font-semibold border border-blue-400/30">
-            ✨ I'm working on it ...
-          </span>
-        </motion.div>
-
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           
           <motion.div 
@@ -97,21 +85,21 @@ function Home() {
 
               <div className="flex gap-3">
                 {/* LinkedIN */}
-                <a href="https://www.linkedin.com/in/adrian-krasniqi-170511400/" className="text-white/70 hover:text-white transition-colors duration-200">
+                <a href="https://www.linkedin.com/in/adrian-krasniqi-170511400/" className="text-white hover:text-blue-600 transition-colors duration-200">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10" /></svg>
                 </a>
 
                 {/* GitHub */}
-                <a href="https://github.com/AdrianK004" className="text-white/70 hover:text-white transition-colors duration-200">
+                <a href="https://github.com/AdrianK004" className="text-white hover:text-black transition-colors duration-200">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
                 </a>
 
                 {/* Facebook */}
-                <a href="https://www.facebook.com/adrian.krasniqi.32241/" className="text-white/70 hover:text-white transition-colors duration-200">
+                <a href="https://www.facebook.com/adrian.krasniqi.32241/" className="text-white hover:text-blue-400 transition-colors duration-200">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
                 </a>
                 {/* Whatsapp */}
-                <a href="https://wa.me/38349427652" className="text-white/70 hover:text-white transition-colors duration-200">
+                <a href="https://wa.me/38349427652" className="text-white hover:text-green-500 transition-colors duration-200">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg>
                 </a>
               </div>
