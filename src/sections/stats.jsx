@@ -56,7 +56,7 @@ function Stats() {
   ];
 
   return (
-    <section className="py-16 bg-gray-900">
+    <section id="stats" className="py-16 bg-gray-900">
       <div className="container max-w-6xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

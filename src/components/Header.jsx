@@ -23,7 +23,7 @@ function Header() {
     { name: 'Journey', href: '#journey' },
     { name: 'Skills', href: '#skills' },
     { name: 'Work', href: '#work' },
-    { name: 'Statics', href: '#statics' },
+    { name: 'Statics', href: '#stats' },
     { name: 'Blog', href: '#blog' },
     { name: 'Contact', href: '#contact' },
   ];

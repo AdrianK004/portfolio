@@ -4,7 +4,8 @@ import About from './sections/about';
 import Journey from './sections/journey';
 import Skills from './sections/skills';
 import Work from './sections/work';
-import Statics from './sections/statics';
+import Stats from './sections/stats';
+import Blog from './sections/blog';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
         <Journey />
         <Skills />
         <Work />
-        <Statics />
+        <Stats />
+        <Blog />
         </div>
       </main>
     </>

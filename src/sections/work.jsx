@@ -3,22 +3,22 @@ import { motion } from "framer-motion";
 function Work() {
   const experiences = [
     {
-      company: "Work",
-      period: "Apr 2015 - Mar 2018",
-      role: "FULL-STACK",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis felis vitae risus pulvinar tincidunt. Nam ac venenatis enim.",
+      company: "VISITSUHAREKA.COM",
+      period: "Apr 2019 - Jun 2020",
+      role: "FRONT-END DEVELOPER",
+      description: "Led frontend development for an informational city website, focusing on clean design and user experience. Also contributed to deployment and infrastructure setup, including OVH hosting, domain configuration, and Cloudflare security.",
     },
     {
-      company: "Work",
-      period: "Mar 2018 - Sep 2019",
-      role: "SOFTWARE ENGINEER",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis felis vitae risus pulvinar tincidunt. Nam ac venenatis enim.",
+      company: "MULTI-TECHNIK.CH",
+      period: "Mar 2021 - Sep 2022",
+      role: "FULL-STACK DEVELOPER",
+      description: "Delivered a production-ready web application for a Swiss company, handling both frontend and backend development. Managed deployment on OVH, domain configuration, and enhanced security through Cloudflare anti-DDoS protection, ensuring reliability and performance.",
     },
     {
-      company: "Work",
-      period: "Oct 2019 - Feb 2021",
-      role: "DEVOPS ENGINEER",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis felis vitae risus pulvinar tincidunt. Nam ac venenatis enim.",
+      company: "FREELANCER",
+      period: "Oct 2022 - Present",
+      role: "SOFTWARE DEVELOPERK",
+      description: "Providing freelance software development services for multiple clients and companies, delivering tailored solutions from concept to deployment. Skilled in building scalable and efficient applications while maintaining strong communication and a client-focused approach.",
     },
   ];
 
@@ -36,9 +36,6 @@ function Work() {
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-3 mt-8">
             MY WORK EXPERIENCE
           </h2>
-          <p className="text-gray-200 text-lg">
-            Here's what I did before freelancing
-          </p>
         </motion.div>
 
         {/* Lista e eksperiencave */}
