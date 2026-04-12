@@ -38,7 +38,6 @@ function Work() {
           </h2>
         </motion.div>
 
-        {/* Lista e eksperiencave */}
         <div className="space-y-8">
           {experiences.map((exp, index) => (
             <motion.div
