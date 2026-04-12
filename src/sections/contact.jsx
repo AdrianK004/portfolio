@@ -21,7 +21,7 @@ function Contact() {
     setStatus('sending');
     
     try {
-      const response = await fetch('https://portfolio-backend-xxsg.onrender.com/api/contact', {
+      const response = await fetch('https://portfolio-backend-v2-a11t.onrender.com/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
