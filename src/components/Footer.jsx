@@ -10,14 +10,12 @@ function Footer() {
           transition={{ duration: 0.5 }}
           className="flex flex-col sm:flex-row justify-between items-center gap-4"
         >
-          {/* Teksti i copyright - majtas */}
           <p className="text-gray-200 text-xs font-semibold sm:text-sm text-center sm:text-left order-2 sm:order-1">
-            © Copyright 2025. · Designed & Built by{" "}
+            © Copyright 2026. · Designed & Built by{" "}
             <span className="text-blue-500 font-bold">Adrian Krasniqi</span>
             . All rights reserved.
           </p>
 
-          {/* Ikonat sociale - djathtas */}
           <div className="flex gap-5 order-1 sm:order-2">
             <a 
               href="https://www.linkedin.com/in/adrian-krasniqi-170511400/" 
