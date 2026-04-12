@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -21,22 +22,20 @@ function Contact() {
     setStatus('sending');
     
     try {
-      const response = await fetch('https://portfolio-backend-v2-a11t.onrender.com/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      await emailjs.send(
+        'service_z57maho',
+        'template_k96p4el',    
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
         },
-        body: JSON.stringify(formData),
-      });
+        'qkpEhEKVrFi4Uvi0i'     
+      );
       
-      if (response.ok) {
-        setStatus('success');
-        setFormData({ name: '', email: '', message: '' });
-        setTimeout(() => setStatus(''), 3000);
-      } else {
-        setStatus('error');
-        setTimeout(() => setStatus(''), 3000);
-      }
+      setStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+      setTimeout(() => setStatus(''), 3000);
     } catch (error) {
       setStatus('error');
       setTimeout(() => setStatus(''), 3000);
