@@ -6,6 +6,8 @@ import Skills from './sections/skills';
 import Work from './sections/work';
 import Stats from './sections/stats';
 import Blog from './sections/blog';
+import Contact from './sections/contact';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -13,15 +15,15 @@ function App() {
       <Header />
       <main>
         <Home />
-        <div className="bg-white">
         <About />
         <Journey />
         <Skills />
         <Work />
         <Stats />
         <Blog />
-        </div>
+        <Contact />
       </main>
+      <Footer />
     </>
   );
 }
