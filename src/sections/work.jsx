@@ -17,7 +17,7 @@ function Work() {
     {
       company: "FREELANCER",
       period: "Oct 2022 - Present",
-      role: "SOFTWARE DEVELOPERK",
+      role: "SOFTWARE DEVELOPER",
       description: "Providing freelance software development services for multiple clients and companies, delivering tailored solutions from concept to deployment. Skilled in building scalable and efficient applications while maintaining strong communication and a client-focused approach.",
     },
   ];
