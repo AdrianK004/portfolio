@@ -3,10 +3,121 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --brand-400: #38bdf8;
+    --brand-500: #0ea5e9;
+    --brand-600: #2563eb;
+  }
+
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
+
   body {
-    background-color: white;
+    background-color: #0b1120;
+    color: #e2e8f0;
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(56, 189, 248, 0.3);
+    color: #fff;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0b1120;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(#2563eb, #0ea5e9);
+    border-radius: 999px;
+    border: 2px solid #0b1120;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(#1d4ed8, #38bdf8);
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: "Space Grotesk", "Inter", ui-sans-serif, sans-serif;
+  }
+
+  /* Gradient text used for accents */
+  .text-gradient {
+    background-image: linear-gradient(120deg, #38bdf8, #2563eb, #818cf8);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-gradient-animated {
+    background-image: linear-gradient(120deg, #38bdf8, #2563eb, #818cf8, #38bdf8);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient-x 6s ease infinite;
+  }
+
+  /* Section eyebrow label */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-400;
+  }
+
+  /* Glass card */
+  .glass {
+    background: rgba(17, 26, 46, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    backdrop-filter: blur(12px);
+  }
+
+  /* Thin gradient divider */
+  .divider {
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(56, 189, 248, 0.5),
+      transparent
+    );
+  }
+}
+
+@layer utilities {
+  @keyframes gradient-x {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
 }

@@ -1,117 +1,149 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
+import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
+
+const navLinks = [
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Experience", href: "#work" },
+  { name: "Education", href: "#journey" },
+  { name: "Contact", href: "#contact" },
+];
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState("#home");
+
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, {
+    stiffness: 120,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const handleScroll = () => setScrolled(window.scrollY > 40);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Journey', href: '#journey' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Work', href: '#work' },
-    { name: 'Statics', href: '#stats' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Contact', href: '#contact' },
-  ];
+  // Highlight the section currently in view.
+  useEffect(() => {
+    const sections = navLinks
+      .map((l) => document.querySelector(l.href))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(`#${entry.target.id}`);
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+    );
+
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <>
-      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-gray-900 rounded-b-3xl' 
-          : 'bg-transparent'
-      }`}>
-        <div className="w-full px-6 md:px-12 lg:px-20">
-          <div className="flex justify-between items-center py-4">
-            <a href="#home" className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent">
-              AK
-            </a>
+    <header
+      className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 ${
+        scrolled
+          ? "border-b border-white/10 bg-ink-950/80 backdrop-blur-xl"
+          : "border-b border-transparent bg-transparent"
+      }`}
+    >
+      {/* Scroll progress bar */}
+      <motion.div
+        style={{ scaleX: progress }}
+        className="absolute bottom-0 left-0 h-0.5 w-full origin-left bg-gradient-to-r from-brand-400 via-brand-600 to-indigo-500"
+      />
 
-            <div className="hidden md:flex gap-8 lg:gap-12">
+      <div className="mx-auto w-full max-w-7xl px-6 md:px-10">
+        <div className="flex items-center justify-between py-4">
+          <a
+            href="#home"
+            className="font-display text-2xl font-bold text-white transition-transform hover:scale-105 md:text-3xl"
+          >
+            A<span className="text-gradient">K</span>
+          </a>
+
+          {/* Desktop nav */}
+          <nav className="hidden items-center gap-1 md:flex">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className={`relative rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                  active === link.href
+                    ? "text-white"
+                    : "text-slate-300 hover:text-white"
+                }`}
+              >
+                {active === link.href && (
+                  <motion.span
+                    layoutId="nav-pill"
+                    className="absolute inset-0 -z-10 rounded-full bg-white/10 ring-1 ring-white/10"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+                {link.name}
+              </a>
+            ))}
+          </nav>
+
+          {/* Mobile toggle */}
+          <button
+            onClick={() => setIsMobileMenuOpen((v) => !v)}
+            aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
+            className="text-slate-200 focus:outline-none md:hidden"
+          >
+            <svg className="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isMobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.2 }}
+            className="fixed left-4 right-4 top-20 z-[999] rounded-2xl border border-white/10 bg-ink-950/90 p-2 shadow-xl backdrop-blur-xl md:hidden"
+          >
+            <div className="flex flex-col">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-200 hover:text-blue-400 hover:scale-105 transition-all duration-200 font-medium text-lg"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`rounded-xl px-4 py-3 text-base font-medium transition-colors ${
+                    active === link.href
+                      ? "bg-white/10 text-white"
+                      : "text-slate-300 hover:bg-white/5 hover:text-white"
+                  }`}
                 >
                   {link.name}
                 </a>
               ))}
             </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden text-gray-200 focus:outline-none"
-            >
-              <svg
-                className="w-7 h-7"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                {isMobileMenuOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                )}
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <>
-        
-        {/* Mobile Menu */}
-        <div className={`md:hidden fixed top-20 left-4 right-4 rounded-2xl z-[999] 
-                        bg-black/60 
-                        backdrop-blur-md 
-                        border border-white/5
-                        shadow-xl
-                        transition-all duration-300 ease-out
-                        ${isMobileMenuOpen 
-                          ? 'opacity-100 translate-y-0 pointer-events-auto' 
-                          : 'opacity-0 -translate-y-8 pointer-events-none '}`}$>
-          <div className="flex flex-col items-center gap-5 py-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-white/80 hover:text-blue-400 hover:scale-105 transition-all duration-200 font-medium text-lg"
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
-        </div>
-      </>
-      </header>
-    </>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
   );
 }
 

@@ -1,104 +1,97 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { motion } from "framer-motion";
+import SectionHeading from "../components/SectionHeading";
+
+const journeyData = [
+  {
+    period: "2021 - 2025",
+    title: "Studies",
+    school: "University of Prizren 'Ukshin Hoti'",
+    description:
+      "Studied Computer Science and committed to a professional career in technology. Achieved a GPA of 9.0 and was awarded four scholarships from the state and the faculty, while developing various projects along the way.",
+    location: "Prizren, Kosovo",
+    highlight: "GPA 9.0 · 4 Scholarships",
+  },
+  {
+    period: "2018 - 2021",
+    title: "High School",
+    school: "Gymnasium 'Jeta e Re'",
+    description:
+      "Focused on science and strengthened my passion for technology as an excellent student. A key achievement was contributing to the development of visitsuhareka.com, built to promote our city.",
+    location: "Suharekë, Kosovo",
+    highlight: "Science track",
+  },
+  {
+    period: "2008 - 2018",
+    title: "Primary School",
+    school: "SH.F.M.U 'Gj.K - Skenderbeu'",
+    description:
+      "A foundational period where I took my first steps in education and personal development — and where my passion for computers first began. Completed with excellent academic results.",
+    location: "Sallagrazhdë, Kosovo",
+    highlight: "Where it started",
+  },
+];
+
+const CapIcon = (
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" /><path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
+  </svg>
+);
+
+const PinIcon = (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+  </svg>
+);
 
 const Journey = () => {
-  const sectionRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
-
-  const journeyData = [
-    {
-      period: "2008 - 2018",
-      title: "Primary School",
-      school: "SH.F.M.U 'GJ.K - SKENDERBEU'",
-      description: "My primary school years were a foundational period that I will never forget. During this time, I took my first and most important steps in both education and personal development. It was also when my passion for computers first began. I was a dedicated student and successfully completed this stage with excellent academic results.",
-      location: "Sallagrazhdë, Kosovo"
-    },
-    {
-      period: "2018 - 2021",
-      title: "High School",
-      school: "Gymnasium 'Jeta e Re'",
-      description: "During high school, I continued to focus on science, further strengthening my passion for technology. I was an excellent student, actively participating in various projects. One of my most significant achievements was contributing to the development of the website visitsuhareka.com, created to promote our city.",
-      location: "Suharekë, Kosovo"
-    },
-    {
-      period: "2021 - 2025",
-      title: "Studies",
-      school: "University of Prizren 'Ukshin Hoti'",
-      description: "I continued my studies in Computer Science, a period where I made the key decision to pursue my professional career in technology. Throughout this journey, I experienced both rewarding and challenging moments, all approached with strong focus and dedication. I achieved a GPA of 9.0 and was awarded four scholarships from both the state and the faculty. During this time, I developed various projects and continue to build on this path in a professional capacity.",
-      location: "Prizren, Kosovo"
-    }
-  ];
-
   return (
-    <section id="journey" ref={sectionRef} className="px-6 md:px-12 bg-gray-900">
-      <div className="max-w-7xl mx-auto">
-        <div className='border-t-4 mx-0 sm:mx-4 md:mx-20 rounded-full border-blue-800'></div>
-        
-        <div className="pt-8">
-          <h2 
-            className={`text-4xl md:text-5xl font-bold text-center text-white mb-12 transition-all duration-700 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
-          >
-            My Journey
-          </h2>
+    <section id="journey" className="relative py-24 md:py-28">
+      <div className="mx-auto max-w-7xl px-6">
+        <SectionHeading
+          eyebrow="Background"
+          title="My"
+          highlight="Journey"
+          subtitle="The education and milestones that shaped my path into technology."
+        />
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {journeyData.map((item, index) => (
-              <div
-                key={index}
-                className={`bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 ${
-                  isVisible 
-                    ? 'opacity-100 translate-y-0' 
-                    : 'opacity-0 translate-y-16'
-                }`}
-                style={{ transitionDelay: `${index * 150}ms`, transitionDuration: '700ms' }}
-              >
-                <div className="mb-4">
-                  <span className="text-blue-400 font-semibold text-sm">
-                    {item.period}
-                  </span>
-                  <h3 className="text-2xl font-bold text-white  mt-1">
-                    {item.title}
-                  </h3>
+        <div className="grid gap-6 md:grid-cols-3">
+          {journeyData.map((item, index) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ y: -6 }}
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-850/60 p-6 shadow-card backdrop-blur transition-colors hover:border-brand-400/40"
+            >
+              <div className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-brand-500/10 opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100" />
+
+              <div className="mb-4 flex items-center justify-between">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-brand-600 to-brand-400 text-white">
+                  {CapIcon}
                 </div>
-                
-                <div className="space-y-2">
-                  <p className="text-gray-300 font-medium">
-                    📚 {item.school}
-                  </p>
-                  <p className="text-gray-400 text-sm">
-                    📍 {item.location}
-                  </p>
-                  <p className="text-gray-300 mt-3 leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
+                <span className="text-sm font-semibold text-brand-400">{item.period}</span>
               </div>
-            ))}
-          </div>
+
+              <h3 className="font-display text-2xl font-bold text-white">{item.title}</h3>
+              <p className="mt-2 font-medium text-slate-200">{item.school}</p>
+              <p className="mt-1 flex items-center gap-1.5 text-sm text-slate-400">
+                {PinIcon} {item.location}
+              </p>
+
+              <span className="mt-4 inline-block rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-brand-300">
+                {item.highlight}
+              </span>
+
+              <p className="mt-4 text-sm leading-relaxed text-slate-400">
+                {item.description}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
