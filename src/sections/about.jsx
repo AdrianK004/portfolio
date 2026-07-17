@@ -146,7 +146,7 @@ const About = () => {
 
           {/* Right: proficiency bars */}
           <Reveal delay={0.1} direction="left">
-            <div className="rounded-3xl border border-white/10 bg-ink-850/60 p-8 shadow-card backdrop-blur">
+            <div className="rounded-3xl border border-white/10 bg-ink-850 p-8 shadow-card">
               <h3 className="font-display mb-6 text-xl font-bold text-white">
                 Technical Proficiency
               </h3>

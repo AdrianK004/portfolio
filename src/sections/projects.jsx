@@ -141,7 +141,7 @@ function Projects() {
         {/* Featured project */}
         {featured.map((p) => (
           <Reveal key={p.title} className="mb-12">
-            <div className="grid items-center gap-8 rounded-3xl border border-white/10 bg-ink-850/60 p-6 shadow-card backdrop-blur md:p-8 lg:grid-cols-2 lg:gap-12">
+            <div className="grid items-center gap-8 rounded-3xl border border-white/10 bg-ink-850 p-6 shadow-card md:p-8 lg:grid-cols-2 lg:gap-12">
               {/* Preview */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -197,7 +197,7 @@ function Projects() {
               <Reveal key={p.title} delay={i * 0.1}>
                 <motion.div
                   whileHover={{ y: -6 }}
-                  className="group flex h-full flex-col rounded-2xl border border-white/10 bg-ink-850/60 p-6 shadow-card backdrop-blur transition-colors hover:border-brand-400/40"
+                  className="group flex h-full flex-col rounded-2xl border border-white/10 bg-ink-850 p-6 shadow-card transition-colors hover:border-brand-400/40"
                 >
                   <div className={`mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br ${p.accent} text-white`}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

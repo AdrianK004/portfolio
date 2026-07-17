@@ -90,7 +90,7 @@ function Skills() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
               whileHover={{ y: -6 }}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-850/60 p-6 shadow-card backdrop-blur transition-colors hover:border-brand-400/40"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-850 p-6 shadow-card transition-colors hover:border-brand-400/40"
             >
               <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-brand-500/10 opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100" />
               <div className="mb-4 flex items-center justify-between">

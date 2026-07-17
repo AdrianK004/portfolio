@@ -88,7 +88,7 @@ function Stats() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="rounded-3xl border border-white/10 bg-gradient-to-br from-ink-850/80 to-ink-800/60 p-10 shadow-glow backdrop-blur"
+          className="rounded-3xl border border-white/10 bg-gradient-to-br from-ink-850/80 to-ink-800/60 p-10 shadow-glow"
         >
           <div className="grid grid-cols-2 gap-8 text-center md:grid-cols-4">
             {stats.map((stat, index) => (

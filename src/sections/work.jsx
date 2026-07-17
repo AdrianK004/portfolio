@@ -68,7 +68,7 @@ function Work() {
                   )}
                 </span>
 
-                <div className="rounded-2xl border border-white/10 bg-ink-850/60 p-6 shadow-card backdrop-blur transition-colors hover:border-brand-400/40">
+                <div className="rounded-2xl border border-white/10 bg-ink-850 p-6 shadow-card transition-colors hover:border-brand-400/40">
                   <div className={`flex flex-wrap items-center gap-2 ${index % 2 !== 0 ? "md:justify-end" : ""}`}>
                     <span className="rounded-full border border-brand-400/30 bg-brand-500/10 px-3 py-1 text-xs font-semibold text-brand-300">
                       {exp.period}

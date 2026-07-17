@@ -83,7 +83,7 @@ function Blog() {
               whileHover={{ y: -6 }}
               className="group flex cursor-default flex-col items-center"
             >
-              <div className="flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-ink-850/60 text-slate-300 shadow-card backdrop-blur transition-all duration-300 group-hover:border-brand-400/40 group-hover:bg-gradient-to-br group-hover:from-brand-600 group-hover:to-brand-500 group-hover:text-white md:h-24 md:w-24">
+              <div className="flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-ink-850 text-slate-300 shadow-card transition-all duration-300 group-hover:border-brand-400/40 group-hover:bg-gradient-to-br group-hover:from-brand-600 group-hover:to-brand-500 group-hover:text-white md:h-24 md:w-24">
                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   {item.icon}

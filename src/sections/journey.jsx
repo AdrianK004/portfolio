@@ -66,7 +66,7 @@ const Journey = () => {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] }}
               whileHover={{ y: -6 }}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-850/60 p-6 shadow-card backdrop-blur transition-colors hover:border-brand-400/40"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-850 p-6 shadow-card transition-colors hover:border-brand-400/40"
             >
               <div className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-brand-500/10 opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100" />
 

@@ -95,7 +95,7 @@ function Contact() {
                   href={c.href}
                   target={c.label === "Location" ? "_blank" : undefined}
                   rel="noopener noreferrer"
-                  className="group flex items-start gap-4 rounded-2xl border border-white/10 bg-ink-850/60 p-5 shadow-card backdrop-blur transition-colors hover:border-brand-400/40"
+                  className="group flex items-start gap-4 rounded-2xl border border-white/10 bg-ink-850 p-5 shadow-card transition-colors hover:border-brand-400/40"
                 >
                   <div className={`flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5 ${c.color}`}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -120,7 +120,7 @@ function Contact() {
           <Reveal direction="left" delay={0.1} className="lg:col-span-3">
             <form
               onSubmit={handleSubmit}
-              className="rounded-3xl border border-white/10 bg-ink-850/60 p-6 shadow-card backdrop-blur md:p-8"
+              className="rounded-3xl border border-white/10 bg-ink-850 p-6 shadow-card md:p-8"
             >
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <input

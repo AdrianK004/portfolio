@@ -33,9 +33,11 @@ export default {
           "linear-gradient(to right, rgba(148,163,184,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(148,163,184,0.06) 1px, transparent 1px)",
       },
       keyframes: {
+        /* Translate-only: a scale() here forces Safari to re-rasterize the
+           large blurred layer every frame. */
         "aurora-shift": {
-          "0%, 100%": { transform: "translate3d(0,0,0) scale(1)" },
-          "50%": { transform: "translate3d(4%, 3%, 0) scale(1.15)" },
+          "0%, 100%": { transform: "translate3d(0,0,0)" },
+          "50%": { transform: "translate3d(6%, 4%, 0)" },
         },
         float: {
           "0%, 100%": { transform: "translateY(0)" },

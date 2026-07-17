@@ -77,8 +77,8 @@ function Home() {
 
       {/* Aurora glow */}
       <div aria-hidden="true" className="absolute inset-0 z-0 overflow-hidden">
-        <div className="animate-aurora absolute -top-24 left-1/4 h-96 w-96 rounded-full bg-brand-600/30 blur-[120px]" />
-        <div className="animate-aurora animation-delay-2000 absolute bottom-0 right-1/4 h-96 w-96 rounded-full bg-sky-500/20 blur-[120px]" />
+        <div className="aurora-blob animate-aurora absolute -top-24 left-1/4 h-96 w-96 rounded-full bg-brand-600/30 blur-[100px]" />
+        <div className="aurora-blob animate-aurora animation-delay-2000 absolute bottom-0 right-1/4 h-96 w-96 rounded-full bg-sky-500/20 blur-[100px]" />
       </div>
 
       <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[auto_1fr] md:gap-14">
